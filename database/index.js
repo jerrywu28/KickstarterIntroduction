@@ -3,9 +3,21 @@ mongoose.connect('mongodb://localhost:3000');
 const db = mongoose.connection;
 
 const projectSchema = new Schema({
-  name: {
-    type: String,
-    required: true
+  name: String,
+  summary: String,
+  owner: {
+    name: String,
+    numProjects: Number
+  },
+  player: {
+    source: String,
+    location: String
+  },
+  status: {
+    currentRaised: Number,
+    targetGoal: Number,
+    backers: Number,
+    deadline: Date
   }
 });
 
