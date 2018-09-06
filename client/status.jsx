@@ -1,7 +1,7 @@
 const Status = props => {
   return (
     <div className="status-box">
-      <progress value="772" max="8000"></progress><br />
+      <progress value="7720" max="20000"></progress><br />
       <br />
       <span id="funds-raised">$7,720</span><br />
       <span className="project-stats-text">pledged as of $20,000 goal</span><br />
@@ -22,3 +22,5 @@ const Status = props => {
 
 
 export default Status
+
+//progress tag value and max should also be {props.status.currentRaised} and {props.status.targetGoal}
