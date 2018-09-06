@@ -1,8 +1,9 @@
 const express = require('express');
 const parser = require('body-parser');
+const database = require('../database/index.js');
 const app = express();
 
-app.use(express.urlencoded({extended:true}), parser.json());
+app.use(express.static(__dirname + '/../public'), express.urlencoded({extended:true}), parser.json());
 
 app.get('/', (req, res) => {
   console.log('Server receiving GET request.');

@@ -6,20 +6,22 @@ class Introduction extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-
+      project: {}
     }
   }
+
+
 
   render() {
     return (
       <div>
         <div id="navigation-bar">
         </div>
-        <div id="header">
+        <div id="header" project={this.state.project}>
           <Header />
         </div>
         <div className="player-and-status-container">
-          <Player /><Status />
+          <Player project={this.state.project}/><Status project={this.state.project}/>
         </div>
       </div>
     )
