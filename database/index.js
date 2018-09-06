@@ -28,7 +28,7 @@ const projectSchema = mongoose.Schema({
 
 const Project = mongoose.model('Project', projectSchema);
 
-const createDoc = projects => {
+const createProject = projects => {
   projects.forEach(project => {
     const object = new Project({
       name: project.name,
@@ -64,10 +64,11 @@ const createDoc = projects => {
   })
 }
 
-createDoc(fakedata.projects);
+createProject(fakedata.projects);
 
-const findDoc = (project, callback) => {
-  Project.find({}, callback)
+const findProjects = (callback) => {
+  Project.find()
+  .then(projects => callback(projects));
 }
 
 // $.ajax({
@@ -77,5 +78,5 @@ const findDoc = (project, callback) => {
 //   error: err => console.log('err', err)
 // })
 
-module.exports.createDoc = createDoc;
-module.exports.findDoc = findDoc;
+module.exports.createProject = createProject
+module.exports.findProjects = findProjects;
