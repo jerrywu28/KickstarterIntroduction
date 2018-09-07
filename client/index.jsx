@@ -15,7 +15,7 @@ class Introduction extends React.Component {
     this.getProject = this.getProject.bind(this);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.getProject();
   }
 
