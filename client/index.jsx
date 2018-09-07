@@ -9,6 +9,7 @@ class Introduction extends React.Component {
     this.state = {
       project: {},
       owner: {},
+      player: {},
       status: {}
     }
     this.getProject = this.getProject.bind(this);
@@ -19,27 +20,15 @@ class Introduction extends React.Component {
   }
 
   getProject() {
-    // $.ajax({
-    //   url: 'http://127.0.0.1:3000/projects',
-    //   type: 'GET',
-    //   success: projects => {
-    //     console.log(projects[0].status.deadline - Date.now())
-    //     this.setState({project: projects[0],
-    //       owner: projects[0].owner,
-    //       status: projects[0].status
-    //     })
-    //   },
-    //   error: err => {
-    //     console.log('GET request error: ', err);
-    //   }
-    // })
-    axios.get('http://127.0.0.1:3000/projects')
+    // get projects/:projectid
+    axios.get('http://127.0.0.1:3000/projects/')
     .then(projects => {
-      console.log(projects.data[0]);
+      const index = Math.floor(Math.random() * 200);
       this.setState({
-        project: projects.data[0],
-        owner: projects.data[0].owner,
-        status: projects.data[0].status
+        project: projects.data[index],
+        owner: projects.data[index].owner,
+        player: projects.data[index].player,
+        status: projects.data[index].status
       })
     })
   }
@@ -53,7 +42,7 @@ class Introduction extends React.Component {
           <Header project={this.state.project} owner={this.state.owner}/>
         </div>
         <div className="player-and-status-container">
-          <Player project={this.state.project}/><Status project={this.state.project} stats={this.state.status}/>
+          <Player project={this.state.project} player={this.state.player}/><Status project={this.state.project} stats={this.state.status}/>
         </div>
       </div>
     )

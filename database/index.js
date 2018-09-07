@@ -1,13 +1,14 @@
 const mongoose = require('mongoose');
-const fakedata = require('./fakedata.js');
-mongoose.connect('mongodb://127.0.0.1:27017/projects');
+// const fakedata = require('./fakedata.js');
+const faker = require('faker');
+mongoose.connect('mongodb://127.0.0.1:27017/projects', { useNewUrlParser: true });
 
 const projectSchema = mongoose.Schema({
-  id: {
-    type: Number,
-    unique: true
+  name: {
+    type: String,
+    unique: true,
+    index: true
   },
-  name: String,
   summary: String,
   owner: {
     avatar: String,
@@ -22,7 +23,7 @@ const projectSchema = mongoose.Schema({
     currentRaised: Number,
     targetGoal: Number,
     backers: Number,
-    deadline: Date
+    deadline: Number
   }
 });
 
@@ -64,12 +65,48 @@ const createProject = projects => {
   })
 }
 
-createProject(fakedata.projects);
-
-const findProjects = (callback) => {
+const findProjects = callback => {
   Project.find()
   .then(projects => callback(projects));
 }
+
+const generateFakes = () => {
+  for (let i = 1; i < 100; i++) {
+    let fakeObj = new Project({
+      name: faker.company.companyName(),
+      summary: faker.company.catchPhrase(),
+      owner: {
+        avatar: faker.image.avatar(),
+        name: faker.company.bsBuzz(),
+        numProjects: faker.random.number()
+      },
+      player: {
+        source: 'https://www.youtube.com/embed/hHW1oY26kxQ',
+        location: faker.address.city() + ', ' + faker.address.state()
+      },
+      status: {
+        currentRaised: Math.floor(Math.random() * 1000),
+        targetGoal: Math.floor(Math.random() * 10000),
+        backers: Math.floor(Math.random() * 1000),
+        deadline: new Date().setDate(new Date().getDate() + (Math.random()*100))
+      }
+    });
+
+    fakeObj.validate((err) => {
+        if (err) {
+          console.log('Error with validation: ', err);
+        } else {
+          fakeObj.save(err => {
+            if (err) {
+              console.error(err);
+            }
+          })
+        }
+    })
+  }
+}
+// generateFakes();
+
 
 // $.ajax({
 //     url: "https://www.kickstarter.com/projects/search.json?search=&term=era-the-chosen-a-horror-rpg-defend-our-dimension-0",

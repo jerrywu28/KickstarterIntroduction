@@ -12,8 +12,8 @@ const Status = props => {
       <span className="project-stats">{props.stats.deadline}</span><br />
       <span className="project-stats-text">days to go</span><br />
       <br />
-      <button id="back-project">Back this project</button><br />
-      <button id="follow-project"><span className="glyphicon glyphicon-bookmark"></span> Follow Project</button><i className="fab fa-facebook"></i><i className="fab fa-twitter"></i><i className="fas fa-envelope"></i><i className="fas fa-code"></i><br />
+      <button id="back-project" onClick={() => console.log('This function will create a modal to contribute funds.')}>Back this project</button><br />
+      <button id="follow-project" onClick={() => console.log('This function does not follow project yet.')}><span className="glyphicon glyphicon-bookmark"></span> Follow Project</button><i className="fab fa-facebook"></i><i className="fab fa-twitter"></i><i className="fas fa-envelope"></i><i className="fas fa-code"></i><br />
       <br />
       <p id="project-term"><u>All or nothing.</u> This project will only be funded if it reaches its goal by {props.stats.deadline}.</p><br />
     </div>
@@ -22,5 +22,3 @@ const Status = props => {
 
 
 export default Status
-
-//progress tag value and max should also be {props.status.currentRaised} and {props.status.targetGoal}
