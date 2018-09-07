@@ -1,3 +1,4 @@
+import NavBar from './navbar.jsx';
 import Header from './header.jsx';
 import Player from './player.jsx';
 import Status from './status.jsx';
@@ -19,6 +20,12 @@ class Introduction extends React.Component {
     this.getProject();
   }
 
+  componentDidUpdate(prevProps) {
+  if (this.props.userID !== prevProps.userID) {
+    this.fetchData(this.props.userID);
+    }
+  }
+
   getProject() {
     // get projects/:projectid
     axios.get('http://127.0.0.1:3000/projects/')
@@ -37,6 +44,7 @@ class Introduction extends React.Component {
     return (
       <div>
         <div id="navigation-bar">
+          <NavBar />
         </div>
         <div id="header">
           <Header project={this.state.project} owner={this.state.owner}/>
