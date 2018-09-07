@@ -78,7 +78,7 @@ const generateFakes = () => {
       owner: {
         avatar: faker.image.avatar(),
         name: faker.company.bsBuzz(),
-        numProjects: faker.random.number()
+        numProjects: Math.ceil(Math.random() * 3)
       },
       player: {
         source: 'https://www.youtube.com/embed/hHW1oY26kxQ',
@@ -88,7 +88,7 @@ const generateFakes = () => {
         currentRaised: Math.floor(Math.random() * 1000),
         targetGoal: Math.floor(Math.random() * 10000),
         backers: Math.floor(Math.random() * 1000),
-        deadline: new Date().setDate(new Date().getDate() + (Math.random()*100))
+        deadline: new Date().setDate(new Date().getDate() + (Math.random()*8400000))
       }
     });
 

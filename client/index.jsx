@@ -23,7 +23,7 @@ class Introduction extends React.Component {
     // get projects/:projectid
     axios.get('http://127.0.0.1:3000/projects/')
     .then(projects => {
-      const index = Math.floor(Math.random() * 200);
+      const index = Math.floor(Math.random() * 100);
       this.setState({
         project: projects.data[index],
         owner: projects.data[index].owner,
@@ -42,7 +42,7 @@ class Introduction extends React.Component {
           <Header project={this.state.project} owner={this.state.owner}/>
         </div>
         <div className="player-and-status-container">
-          <Player project={this.state.project} player={this.state.player}/><Status project={this.state.project} stats={this.state.status}/>
+          <Player project={this.state.project} player={this.state.player}/><Status stats={this.state.status}/>
         </div>
       </div>
     )

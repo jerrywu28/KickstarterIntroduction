@@ -7,7 +7,7 @@ body {
 .header-container {
   display: flex;
   align-items: center;
-  margin: 30px 50px;
+  margin: 30px 50px 20px 50px;
 }
 
 .header-owner {
@@ -47,11 +47,12 @@ body {
 .header-title {
   flex: 5;
   height: 125px;
-  margin: -40px 0 0 -25px;
+  margin: -20px 0 0 -10px;
 }
   
   #project-tagline {
     color: rgba(90,90,90,1);
+    font-size: 18px;
     font-weight: 3;
   }
 
@@ -71,6 +72,7 @@ body {
 
 .status-box {
   flex: 1;
+  margin: -10px 0 0 0;
 }
 
   progress {
@@ -81,12 +83,12 @@ body {
   }
 
   #funds-raised {
-    font-size: 20px;
+    font-size: 24px;
     color: #037362;
   }
 
   .project-stats {
-    font-size: 20px;
+    font-size: 24px;
     color: black;
   }
 
