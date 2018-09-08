@@ -13,7 +13,8 @@ const projects = [{ name: 'L O F I • Hip Hop Radio • 24/7',
      { currentRaised: 8820,
        targetGoal: 25000,
        backers: 7598,
-       deadline: 1538025653155 } },
+       deadline: 1538025653155,
+       formatted: 1538025653155} },
   { name: 'Steak Cooked in a Log of Butter',
     summary: 'Chef Casper Stuhr Sobczyk creates and serves a rib eye that has been coated and aged in a log of butter. This unique preparation process aims to solve the problems that come with regular wet and dry aging of meat.',
     owner: 
@@ -27,7 +28,8 @@ const projects = [{ name: 'L O F I • Hip Hop Radio • 24/7',
      { currentRaised: 24720,
        targetGoal: 50000,
        backers: 17598,
-       deadline: 1538025653156 } },
+       deadline: 1538025653156,
+       formatted: 1538025653156 } },
 ]
 
 //Populate 100 additional data objects:

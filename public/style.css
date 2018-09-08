@@ -19,6 +19,7 @@ body {
 
     #start-project {
       margin: 0 25px;
+      display: inline;
     }
   
   #nav-bar-2 {

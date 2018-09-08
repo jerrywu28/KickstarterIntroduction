@@ -11,20 +11,22 @@ class Introduction extends React.Component {
       project: {},
       owner: {},
       player: {},
-      status: {}
+      status: {},
+      searchClicked: false
     }
     this.getProject = this.getProject.bind(this);
+    this.handleSearchClick = this.handleSearchClick(this);
   }
 
   componentWillMount() {
     this.getProject();
   }
 
-  componentDidUpdate(prevProps) {
-  if (this.props.userID !== prevProps.userID) {
-    this.fetchData(this.props.userID);
-    }
-  }
+  // componentDidUpdate(prevProps) {
+  // if (this.props.userID !== prevProps.userID) {
+  //   this.fetchData(this.props.userID);
+  //   }
+  // }
 
   getProject() {
     // get projects/:projectid
@@ -40,11 +42,15 @@ class Introduction extends React.Component {
     })
   }
 
+  handleSearchClick() {
+    this.setState({searchClicked: !this.state.searchClicked})
+  }
+
   render() {
     return (
       <div>
         <div id="navigation-bar">
-          <NavBar />
+          <NavBar handleSearchClick={this.handleSearchClick}/>
         </div>
         <div id="header">
           <Header project={this.state.project} owner={this.state.owner}/>
