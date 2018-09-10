@@ -12,7 +12,7 @@ class Introduction extends React.Component {
       owner: {},
       player: {},
       status: {},
-      searchClicked: false
+      searchClicked: false,
     }
     this.getProject = this.getProject.bind(this);
     this.handleSearchClick = this.handleSearchClick(this);
@@ -37,7 +37,7 @@ class Introduction extends React.Component {
         project: projects.data[index],
         owner: projects.data[index].owner,
         player: projects.data[index].player,
-        status: projects.data[index].status
+        status: projects.data[index].status,
       })
     })
   }

@@ -7,25 +7,25 @@ const projectSchema = mongoose.Schema({
   name: {
     type: String,
     unique: true,
-    index: true
+    index: true,
   },
   summary: String,
   owner: {
     avatar: String,
     name: String,
-    numProjects: Number
+    numProjects: Number,
   },
   player: {
     source: String,
-    location: String
+    location: String,
   },
   status: {
     currentRaised: Number,
     targetGoal: Number,
     backers: Number,
     deadline: Number,
-    formatted: String
-  }
+    formatted: String,
+  },
 });
 
 const Project = mongoose.model('Project', projectSchema);
@@ -38,19 +38,19 @@ const createProject = projects => {
       owner: {
         avatar: project.owner.avatar,
         name: project.owner.name,
-        numProjects: project.owner.numProjects
+        numProjects: project.owner.numProjects,
       },
       player: {
         source: project.player.source,
-        location: project.player.location
+        location: project.player.location,
       },
       status: {
         currentRaised: project.status.currentRaised,
         targetGoal: project.status.targetGoal,
         backers: project.status.backers,
         deadline: project.status.deadline,
-        formatted: project.status.formatted
-      }
+        formatted: project.status.formatted,
+      },
     });
 
     object.validate((err) => {
@@ -84,19 +84,19 @@ const generateFakes = () => {
       owner: {
         avatar: faker.image.avatar(),
         name: faker.company.bsBuzz(),
-        numProjects: Math.ceil(Math.random() * 3)
+        numProjects: Math.ceil(Math.random() * 3),
       },
       player: {
         source: 'https://www.youtube.com/embed/' + otherVideos[i],
-        location: faker.address.city() + ', ' + faker.address.state()
+        location: faker.address.city() + ', ' + faker.address.state(),
       },
       status: {
         currentRaised: Math.floor(Math.random() * 1000),
         targetGoal: Math.floor(Math.random() * 10000),
         backers: Math.floor(Math.random() * 1000),
         deadline: daysLeft,
-        formatted: interimDate
-      }
+        formatted: interimDate,
+      },
     });
 
     fakeObj.validate((err) => {
@@ -122,5 +122,5 @@ const generateFakes = () => {
 //   error: err => console.log('err', err)
 // })
 
-module.exports.createProject = createProject
+module.exports.createProject = createProject;
 module.exports.findProjects = findProjects;

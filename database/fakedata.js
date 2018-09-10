@@ -5,31 +5,37 @@ const projects = [{ name: 'L O F I • Hip Hop Radio • 24/7',
     owner: 
      { avatar: 'https://yt3.ggpht.com/a-/AN66SAzuvt7wwLelQ34EIP8hmDYLiuzGK-mOkiXsuA=s88-mo-c-c0xffffffff-rj-k-no',
        name: 'Chillhop Music',
-       numProjects: 2 },
+       numProjects: 2,
+     },
     player: 
      { source: 'https://www.youtube.com/embed/LsBrT6vbQa8',
-       location: 'Brooklyn, NY' },
+       location: 'Brooklyn, NY',
+     },
     status: 
      { currentRaised: 8820,
        targetGoal: 25000,
        backers: 7598,
        deadline: 1538025653155,
-       formatted: 1538025653155} },
+       formatted: 1538025653155}
+       ,},
   { name: 'Steak Cooked in a Log of Butter',
     summary: 'Chef Casper Stuhr Sobczyk creates and serves a rib eye that has been coated and aged in a log of butter. This unique preparation process aims to solve the problems that come with regular wet and dry aging of meat.',
     owner: 
      { avatar: 'https://yt3.ggpht.com/a-/AN66SAxLt483LPeh_W8F_doq-7QE2PErDqpMGDZUXA=s88-mo-c-c0xffffffff-rj-k-no',
        name: 'FOOD INSIDER',
-       numProjects: 5 },
+       numProjects: 5,
+      },
     player: 
      { source: 'https://www.youtube.com/embed/suhyTlTi28A',
-       location: 'San Francisco, CA' },
+       location: 'San Francisco, CA',
+     },
     status: 
      { currentRaised: 24720,
        targetGoal: 50000,
        backers: 17598,
        deadline: 1538025653156,
-       formatted: 1538025653156 } },
+       formatted: 1538025653156 },
+     },
 ]
 
 //Populate 100 additional data objects:
