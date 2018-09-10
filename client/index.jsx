@@ -18,7 +18,7 @@ class Introduction extends React.Component {
     this.handleSearchClick = this.handleSearchClick(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.getProject();
   }
 
@@ -43,14 +43,14 @@ class Introduction extends React.Component {
   }
 
   handleSearchClick() {
-    this.setState({searchClicked: !this.state.searchClicked})
+    this.setState({searchClicked: !this.state.searchClicked});
   }
 
   render() {
     return (
       <div>
         <div id="navigation-bar">
-          <NavBar handleSearchClick={this.handleSearchClick}/>
+          <NavBar />
         </div>
         <div id="header">
           <Header project={this.state.project} owner={this.state.owner}/>
