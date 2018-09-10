@@ -32,6 +32,7 @@ class Introduction extends React.Component {
     // get projects/:projectid
     axios.get('http://127.0.0.1:3000/projects/')
     .then(projects => {
+      // console.log(projects.data[0]);
       const index = Math.floor(Math.random() * 100);
       this.setState({
         project: projects.data[index],
