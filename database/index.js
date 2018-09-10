@@ -70,5 +70,6 @@ const findProjects = callback => {
     .then(projects => callback(projects));
 };
 
+module.exports.Project = Project;
 module.exports.createProject = createProject;
 module.exports.findProjects = findProjects;
