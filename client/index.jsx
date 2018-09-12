@@ -2,6 +2,8 @@ import NavBar from './navbar.jsx';
 import Header from './header.jsx';
 import Player from './player.jsx';
 import Status from './status.jsx';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import axios from 'axios';
 
 class Introduction extends React.Component {
@@ -56,6 +58,6 @@ class Introduction extends React.Component {
   }
 }
 
-export default Introduction
-
 ReactDOM.render(<Introduction />, document.getElementById('introduction'));
+
+export default Introduction
