@@ -1,5 +1,15 @@
 {
   "name": "KickstarterIntroduction",
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx"
+    ]
+  },
   "version": "1.0.0",
   "description": "Primary display upon entering project page",
   "author": "Jerry Wu",
@@ -11,19 +21,23 @@
   "scripts": {
     "server": "nodemon server/index.js",
     "webpack": "webpack -d --watch",
-    "test": "jest --watchAll"
+    "test": "jest --coverage --watchAll"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "cors": "^2.8.4",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "faker": "^4.1.0",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "react-test-renderer": "^16.5.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
     "babel-loader": "^8.0.1",
     "bootstrap": "^4.1.3",
     "eslint": "^5.5.0",

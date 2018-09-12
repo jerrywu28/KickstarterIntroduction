@@ -11,14 +11,12 @@ app.get('/projects', (req, res) => {
   database.findProjects(projects => res.status(200).send(projects));
 });
 
-app.get('/projects/1', (req, res) => {
-  console.log('Server receiving GET request for project 1.');
-  database.findProjects({name: 'L O F I • Hip Hop Radio • 24/7'}, projects => res.status(200).send(projects));
-});
-
-app.post('/', (req, res) => {
-  console.log('Server receiving POST request');
-  res.status(201).send();
+app.get('/projects/:id', (req, res) => {
+  // Before sending data to server, days left should be formatted properly here (instead of inside of the database).
+  // Also, server can convert $ pledged and goal to strings (with commas)
+  // Even final date notice can be formatted at this point (if format is undesirable)
+  console.log('Server receiving GET request for project with id: ', req.params.id);
+  database.findProject({id: req.params.id}, projects => res.status(200).send(projects));
 });
 
 const PORT = process.env.PORT || 3000;

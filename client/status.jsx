@@ -8,7 +8,7 @@ const Status = props => {
       <div className="project-stats-text">backers</div><br />
       <div className="project-stats">{props.stats.deadline}</div>
       <div className="project-stats-text">days to go</div><br />
-      <button id="back-project" onClick={() => console.log('This function will create a modal to contribute funds.')}>Back this project</button><br />
+      <button id="back-project" onClick={() => console.log('This function will create a modal to allow contribution of funds.')}>Back this project</button><br />
       <button id="follow-project" onClick={() => console.log('This function does not follow project yet.')}><div className="glyphicon glyphicon-bookmark"></div> Follow Project</button>
       <i className="fab fa-facebook"></i>
       <i className="fab fa-twitter"></i>
@@ -19,7 +19,9 @@ const Status = props => {
   )
 }
 
-//Days to go should be dynamic (number cannot be predetermined in the database--must be rendered on the client side
-//Which means date text underneath it should also convert to time-left
-
 export default Status
+
+/*
+Back-project currently sends users to new page. Future idea: implement a modal to pop-up and allow user to POST
+a donation amount.
+*/

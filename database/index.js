@@ -2,11 +2,12 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/projects', { useNewUrlParser: true });
 
 const projectSchema = mongoose.Schema({
-  name: {
-    type: String,
+  id: {
+    type: Number,
     unique: true,
     index: true,
   },
+  name: String,
   summary: String,
   owner: {
     avatar: String,
@@ -31,6 +32,7 @@ const Project = mongoose.model('Project', projectSchema);
 const createProject = projects => {
   projects.forEach(project => {
     const object = new Project({
+      id: project.id,
       name: project.name,
       summary: project.summary,
       owner: {
@@ -70,6 +72,12 @@ const findProjects = callback => {
     .then(projects => callback(projects));
 };
 
+const findProject = (query, callback) => {
+  Project.find(query)
+  .then(projects => callback(projects));
+};
+
 module.exports.Project = Project;
 module.exports.createProject = createProject;
 module.exports.findProjects = findProjects;
+module.exports.findProject = findProject

@@ -1,15 +1,29 @@
 const database = require('./../database/index.js');
 
-describe('Find should retrieve collection for Projects', () => {
+describe('Retrieve collection for Projects', () => {
   it('Should find an array containing all projects', () => {
     return database.Project.find()
     .then(projects => expect(Array.isArray(projects)).toEqual(true));
   })
 })
 
-describe('Should allow for insertion of new Mongo documents into database', () => {
+describe('Find projects function should apply callback to retrieved array', () => {
+  it('Should allow callback to be used on projects array to handle async challenges', () => {
+    return database.findProjects(projects => {
+      let result = [];
+      projects.forEach(project => {
+        result.push(project);
+      })
+      //Expected length is equal to number of projects in database
+      expect(result.length).toEqual(101);
+    })
+  })
+});
+
+describe('Insertion of new Mongo documents into database', () => {
   it('Should find a document after it has been inserted into database', () => {
     database.createProject([{
+      id: 100,
       name: 'L O F I • Hip Hop Radio • 24/7',
       summary: 'Help fund our lofi hip hop livestream, full of mellow melodic beats perfect for studying, work, relaxing, or focusing..',
       owner: {

@@ -2,7 +2,7 @@ import NavBar from './navbar.jsx';
 import Header from './header.jsx';
 import Player from './player.jsx';
 import Status from './status.jsx';
-const axios = require('axios');
+import axios from 'axios';
 
 class Introduction extends React.Component {
   constructor(props){
@@ -22,23 +22,15 @@ class Introduction extends React.Component {
     this.getProject();
   }
 
-  // componentDidUpdate(prevProps) {
-  // if (this.props.userID !== prevProps.userID) {
-  //   this.fetchData(this.props.userID);
-  //   }
-  // }
-
-  getProject() {
-    // get projects/:projectid
-    axios.get('http://127.0.0.1:3000/projects/')
-    .then(projects => {
-      // console.log(projects.data[0]);
-      const index = Math.floor(Math.random() * 100);
+  getProject(projectid) {
+    //Set to 1 for now, but project id can be passed in to fetch specific project
+    axios.get('http://127.0.0.1:3000/projects/1')
+    .then(project => {
       this.setState({
-        project: projects.data[index],
-        owner: projects.data[index].owner,
-        player: projects.data[index].player,
-        status: projects.data[index].status,
+        project: project.data[0],
+        owner: project.data[0].owner,
+        player: project.data[0].player,
+        status: project.data[0].status,
       })
     })
   }

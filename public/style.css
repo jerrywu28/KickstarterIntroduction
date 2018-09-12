@@ -54,11 +54,6 @@ body {
     border-radius: 50%;
   }
 
-  h5 {
-    margin: 5px;
-  }
-
-
   a.gray-link {
     color: lightgray;
     text-decoration: none;
@@ -71,12 +66,11 @@ body {
     color: black;
     text-decoration: none;
   }
-
-  #author {
-    color: black;
-    font-size: 14px;
-  }
   
+  #author {
+    text-indent: -25px;
+  }
+
 .header-title {
   flex: 5;
   height: 125px;
@@ -163,6 +157,7 @@ body {
     top: -1px;
   }
 
+/*Glyphicons for social media and below player information*/
   i {
     margin: 0 20px 0 0;
   }

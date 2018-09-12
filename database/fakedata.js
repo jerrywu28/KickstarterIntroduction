@@ -1,6 +1,12 @@
 const faker = require('faker');
-const {Project} = require('./index.js');
 
+/*
+This page is not currently working. Need to figure how to import the constructor/model for Projects to here
+in order to generate/simulate data. For now, lines 50 to 92 should be copied and pasted to database/index.js
+And faker should be required as well in order to run the simulation.
+*/
+
+//These were the first two original projects
 const projects = [{ name: 'L O F I • Hip Hop Radio • 24/7',
   summary: 'Help fund our lofi hip hop livestream, full of mellow melodic beats perfect for studying, work, relaxing, or focusing..',
   owner: 
@@ -39,7 +45,8 @@ const projects = [{ name: 'L O F I • Hip Hop Radio • 24/7',
 },
 ];
 
-//Originally in /database/index.js file, but moved over here for clearer organization.
+// Originally in /database/index.js file, but moved over here for clearer organization.
+// currently, line 50 (new Project) does not work as it does not recognize Project as a constructor
 const generateFakes = () => {
   const otherVideos = ['LsBrT6vbQa8', 'hHW1oY26kxQ', 'XK_5upZT4C4', 'UPftsIwGNoQ', '_0OVRN4vU20', '6rReMbO42uE', 'vfWv7j4FIxQ', 'FhzAjZlnGjw', 'y7e-GC6oGhg', 'dhXx2ihRzD8', 'HbeCzCw1tT4', 'EPUOSBrBkZk', '47dtFZ8CFo8', 'O8lFeVfYw_s', 'VYOjWnS4cMY', 'Kp7eSUU9oy8', '_FhgEeAj9ng', 'LsoLEjrDogU', 'sFE-U0Dc8hY', 'bO4HnZ7XLsU', 'Jq59GIshkEA', 'em0MknB6wFo', '5hxibHJOE5E', 'oH6mw2Rc3DQ', 'b9u3Il-fu5I', 'iWMy_bkCtM4', '5ZbklKAAnkI', 'vq6akoG3x2I', 'fgT9zGkiLig', 'K1b8AhIsSYQ', 'mrZRURcb1cM', 'Gs069dndIYk', 'tIdIqbv7SPo', 'jEy6MGu3bIA', 'DPgMjXhqmfw', 'Gru4IfbKlfU', 'y32ejtuxSjM', '5X-Mrc2l1d0', 'V1bFr2SWP1I', 'Glny4jSciVI', 'hWmgsfiklcs', 'elVF7oG0pQs', 'Ic5vxw3eijY', 'CGfKi6kpdTQ', 'Lo2qQmj0_h4', 'v2AC41dglnM', 'I_2D8Eo15wE', 'PeMvMNpvB5M', 'np0solnL1XY', 'fJ9rUzIMcZQ', '1vrEljMfXYo', 'GONmFCkCGCc', 'uAsV5-Hv-7U', 'FTQbiNvZqaY', '3wxyN3z9PL4', 'Xk2NHZukTYg', 'yRYFKcMa_Ek', 'Hn-enjcgV1o', '3DSVMDmzCcA', 'EErSKhC0CZs', 'ccenFp_3kq8', 'LsBrT6vbQa8', 'hHW1oY26kxQ', 'XK_5upZT4C4', 'UPftsIwGNoQ', '_0OVRN4vU20', '6rReMbO42uE', 'vfWv7j4FIxQ', 'FhzAjZlnGjw', 'y7e-GC6oGhg', 'dhXx2ihRzD8', 'HbeCzCw1tT4', 'EPUOSBrBkZk', '47dtFZ8CFo8', 'O8lFeVfYw_s', 'VYOjWnS4cMY', 'Kp7eSUU9oy8', '_FhgEeAj9ng', 'LsoLEjrDogU', 'sFE-U0Dc8hY', 'bO4HnZ7XLsU', 'Jq59GIshkEA', 'em0MknB6wFo', '5hxibHJOE5E', 'oH6mw2Rc3DQ', 'b9u3Il-fu5I', 'iWMy_bkCtM4', '5ZbklKAAnkI', 'vq6akoG3x2I', 'fgT9zGkiLig', 'K1b8AhIsSYQ', 'mrZRURcb1cM', 'Gs069dndIYk', 'tIdIqbv7SPo', 'jEy6MGu3bIA', 'DPgMjXhqmfw', 'Gru4IfbKlfU', 'y32ejtuxSjM', '5X-Mrc2l1d0', 'V1bFr2SWP1I', 'Glny4jSciVI', 'hWmgsfiklcs', 'elVF7oG0pQs', 'Ic5vxw3eijY', 'CGfKi6kpdTQ', 'Lo2qQmj0_h4', 'v2AC41dglnM', 'I_2D8Eo15wE', 'PeMvMNpvB5M', 'np0solnL1XY', 'fJ9rUzIMcZQ', '1vrEljMfXYo', 'GONmFCkCGCc', 'uAsV5-Hv-7U', 'FTQbiNvZqaY', '3wxyN3z9PL4', 'Xk2NHZukTYg', 'yRYFKcMa_Ek', 'Hn-enjcgV1o', '3DSVMDmzCcA', 'EErSKhC0CZs', 'ccenFp_3kq8'];
   for (let i = 1; i < 100; i++) {
@@ -80,6 +87,8 @@ const generateFakes = () => {
     });
   }
 };
+
+// //Uncomment to generate 100 projects
 // generateFakes();
 
 module.exports.projects = projects;
