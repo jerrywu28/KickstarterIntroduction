@@ -21,12 +21,12 @@ class Introduction extends React.Component {
   }
 
   componentDidMount() {
-    this.getProject();
+    this.getProject(1);
   }
 
   getProject(projectid) {
     //Set to 1 for now, but project id can be passed in to fetch specific project
-    axios.get('http://127.0.0.1:3000/projects/1')
+    axios.get(`http://127.0.0.1:3000/projects/${projectid}`)
     .then(project => {
       this.setState({
         project: project.data[0],
