@@ -10,8 +10,8 @@ const Status = props => {
       <div className="project-stats-text">backers</div><br />
       <div className="project-stats">{props.stats.deadline}</div>
       <div className="project-stats-text">days to go</div><br />
-      <button id="back-project" onClick={() => console.log('This function will create a modal to allow contribution of funds.')}>Back this project</button><br />
-      <button id="follow-project" onClick={() => console.log('This function does not follow project yet.')}><div className="glyphicon glyphicon-bookmark"></div> Follow Project</button>
+      <button className="status" id="back-project" onClick={() => props.backButtonClicked()}>Back this project</button><br />
+      <button className="status" id="follow-project" onClick={() => console.log('This function does not follow project yet.')}><div className="glyphicon glyphicon-bookmark"></div> Follow Project</button>
       <i className="fab fa-facebook"></i>
       <i className="fab fa-twitter"></i>
       <i className="fas fa-envelope"></i>

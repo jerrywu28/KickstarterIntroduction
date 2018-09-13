@@ -2,6 +2,7 @@ import NavBar from './navbar.jsx';
 import Header from './header.jsx';
 import Player from './player.jsx';
 import Status from './status.jsx';
+import BackProjectModal from './backprojectmodal.jsx';
 import axios from 'axios';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -14,10 +15,10 @@ class Introduction extends React.Component {
       owner: {},
       player: {},
       status: {},
-      searchClicked: false,
+      backButtonClicked: false
     }
     this.getProject = this.getProject.bind(this);
-    this.handleSearchClick = this.handleSearchClick(this);
+    this.backButtonClicked = this.backButtonClicked.bind(this);
   }
 
   componentDidMount() {
@@ -37,8 +38,8 @@ class Introduction extends React.Component {
     })
   }
 
-  handleSearchClick() {
-    this.setState({searchClicked: !this.state.searchClicked});
+  backButtonClicked() {
+    this.setState({backButtonClicked: !this.state.backButtonClicked})
   }
 
   render() {
@@ -50,8 +51,11 @@ class Introduction extends React.Component {
         <div id="header">
           <Header project={this.state.project} owner={this.state.owner}/>
         </div>
+          {this.state.backButtonClicked ?
+          <BackProjectModal backButtonClicked={this.backButtonClicked} project={this.state.project} owner={this.state.owner}/>
+          : null}
         <div className="player-and-status-container">
-          <Player project={this.state.project} player={this.state.player}/><Status stats={this.state.status}/>
+          <Player project={this.state.project} player={this.state.player}/><Status stats={this.state.status} backButtonClicked={this.backButtonClicked}/>
         </div>
       </div>
     )

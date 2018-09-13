@@ -9,6 +9,7 @@ class NavBar extends React.Component {
     this.handleSearchClick = this.handleSearchClick.bind(this);
   }
 
+  //This may be later implemented to turn NavBar into a search bar whenever search is clicked.
   handleSearchClick() {
     this.setState({searchClicked: !this.state.searchClicked});
   }

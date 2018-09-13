@@ -124,7 +124,7 @@ body {
     color: rgba(90,90,90,1)
   }
 
-  button {
+  button.status {
     background-color: #009E74;
     color: white;
     font-size: 14px;
@@ -151,7 +151,7 @@ body {
       box-shadow: 0 0 0 0px;
     }
 
-  button:hover {
+  button.status:hover {
     background-color: #037362;
     position: relative;
     top: -1px;
@@ -167,3 +167,71 @@ body {
     width: 350px;
     word-wrap: true;
   }
+
+.back-project-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px 0 0 0 ;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.back-project-form {
+  margin: auto auto;
+  width: 80%;
+  height: 90%;
+  background-color: #FBFBFA;
+}
+
+  .back-project-form-header {
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+
+    .close-back-project-modal {
+      float: right;
+      background-color: #FBFBFA;
+      border: none;
+      font-weight: bold;
+    }
+
+  .back-project-title {
+    padding: 5px 0 0 0;
+    height: 100px;
+    background-color: rgb(245,245,245);
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+  }
+
+  .back-project-form-main {
+    display: flex;
+    padding: 50px;
+  }
+
+    .back-project-form-pledges {
+      flex: 3;
+      height: 500px;
+    }
+
+      .list-project-pledges {
+        list-style: none;
+      }
+
+      .list-project-pledge-item {
+        margin: 20px 0 0 -40px;
+        padding: 5px;
+        height: 50px;
+        width: 500px;
+        border: 1px solid lightgray;
+      }
+
+    .back-project-form-info {
+      flex: 2;
+      height: 500px;
+      font-size: 10px;
+    }
