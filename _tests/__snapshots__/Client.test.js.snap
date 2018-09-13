@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Introduction /> render() renders the component 1`] = `
+<div>
+  <div
+    id="navigation-bar"
+  >
+    <NavBar />
+  </div>
+  <div
+    id="header"
+  >
+    <Header
+      owner={Object {}}
+      project={Object {}}
+    />
+  </div>
+  <div
+    className="player-and-status-container"
+  >
+    <Player
+      player={Object {}}
+      project={Object {}}
+    />
+    <Status
+      stats={Object {}}
+    />
+  </div>
+</div>
+`;
+
+exports[`<Introduction /> render() renders the main introduction component 1`] = `
+<div>
+  <div
+    id="navigation-bar"
+  >
+    <NavBar />
+  </div>
+  <div
+    id="header"
+  >
+    <Header
+      owner={Object {}}
+      project={Object {}}
+    />
+  </div>
+  <div
+    className="player-and-status-container"
+  >
+    <Player
+      player={Object {}}
+      project={Object {}}
+    />
+    <Status
+      stats={Object {}}
+    />
+  </div>
+</div>
+`;
+
+exports[`<NavBar /> render() renders the component for NavBar 1`] = `
+<div
+  className="main-navigation-bar"
+>
+  <div
+    id="nav-bar-1"
+  >
+    <a
+      className="black-link"
+      href="#"
+    >
+      Explore
+    </a>
+    <a
+      className="black-link"
+      href="#"
+    >
+      Start a project
+    </a>
+  </div>
+  <div
+    id="nav-bar-2"
+  >
+    <img
+      height="18.9375"
+      src="https://d3mlfyygrfdi2i.cloudfront.net/kickstarter-logo-color.png"
+      width="185"
+    />
+  </div>
+  <div
+    id="nav-bar-3"
+  >
+    <a
+      className="black-link"
+      href="#"
+      onClick={[Function]}
+    >
+      Search 
+      <i
+        className="fas fa-search"
+      />
+    </a>
+    <a
+      className="black-link"
+      href="#"
+    >
+      Sign in
+    </a>
+  </div>
+</div>
+`;

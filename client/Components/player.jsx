@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Player = props => (
   <div className="player-box">
     <iframe width="740" height="440" frameBorder="0" src={props.player.source}></iframe>

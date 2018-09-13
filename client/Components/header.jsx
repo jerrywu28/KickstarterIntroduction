@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Header = props => (
   <div className="header-container">
     <div className="header-owner">
