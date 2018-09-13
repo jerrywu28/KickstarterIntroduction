@@ -1,8 +1,14 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
+import React from 'react';
 import { shallow } from 'enzyme';
-const Introduction = require('./../client/index.jsx');
+import toJson from 'enzyme-to-json';
+import Introduction from '../client/index.jsx';
 
-it('renders without crashing', () => {
-  shallow(<Introduction />);
+describe('<Introduction />', () => {
+  describe('render()', () => {
+    test('renders the component', () => {
+      const wrapper = shallow(<Introduction />);
+
+      expect(toJson(wrapper)).toMatchSnapshot();
+    });
+  });
 });
