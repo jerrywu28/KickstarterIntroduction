@@ -5,7 +5,7 @@ const BackProjectModal = props => (
     <div className="back-project-modal">
       <div className="back-project-form">
         <div className="back-project-form-header">
-        <button className="close-back-project-modal" onClick={() => props.backButtonClicked()}>&times;</button>
+        <button className="close-project-modal" onClick={() => props.backButtonClicked()}>&times;</button>
         <img src="https://d3mlfyygrfdi2i.cloudfront.net/kickstarter-logo-color.png" height="18.9375" width="185"></img>
         </div>
         <div className="back-project-title">

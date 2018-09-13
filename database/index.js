@@ -23,7 +23,6 @@ const projectSchema = mongoose.Schema({
     targetGoal: Number,
     backers: Number,
     deadline: Number,
-    formatted: String,
   },
 });
 
@@ -49,7 +48,6 @@ const createProject = projects => {
         targetGoal: project.status.targetGoal,
         backers: project.status.backers,
         deadline: project.status.deadline,
-        formatted: project.status.formatted,
       },
     });
 

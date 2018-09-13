@@ -9,7 +9,9 @@
       "json",
       "jsx"
     ],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "version": "1.0.0",
   "description": "Primary display upon entering project page",
@@ -31,6 +33,7 @@
     "enzyme-adapter-react-16": "^1.5.0",
     "faker": "^4.1.0",
     "jest": "^23.6.0",
+    "moment": "^2.22.2",
     "react-test-renderer": "^16.5.0"
   },
   "devDependencies": {

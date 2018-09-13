@@ -1,7 +1,7 @@
 import React from 'react';
 
 class NavBar extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       searchClicked: false,

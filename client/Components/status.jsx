@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 const Status = props => {
   return (
@@ -8,7 +9,7 @@ const Status = props => {
       <div className="project-stats-text">pledged as of ${props.stats.targetGoal} goal</div><br />
       <div className="project-stats">{props.stats.backers}</div>
       <div className="project-stats-text">backers</div><br />
-      <div className="project-stats">{props.stats.deadline}</div>
+      <div className="project-stats">{moment(props.stats.deadline).diff(moment(), 'days')}</div>
       <div className="project-stats-text">days to go</div><br />
       <button className="status" id="back-project" onClick={() => props.backButtonClicked()}>Back this project</button><br />
       <button className="status" id="follow-project" onClick={() => console.log('This function does not follow project yet.')}><div className="glyphicon glyphicon-bookmark"></div> Follow Project</button>
@@ -16,14 +17,9 @@ const Status = props => {
       <i className="fab fa-twitter"></i>
       <i className="fas fa-envelope"></i>
       <i className="fas fa-code"></i><br />
-      <br /><p id="project-term"><u>All or nothing.</u> This project will only be funded if it reaches its goal by {props.stats.formatted}.</p>
+      <br /><p id="project-term"><u>All or nothing.</u>This project will only be funded if it reaches its goal by {moment(props.stats.deadline).format('LLLL')}.</p>
     </div>
   )
 }
 
-export default Status
-
-/*
-Back-project currently sends users to new page. Future idea: implement a modal to pop-up and allow user to POST
-a donation amount.
-*/
+export default Status;

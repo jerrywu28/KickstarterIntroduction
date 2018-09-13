@@ -95,6 +95,7 @@ body {
 
   .playlink {
     margin: 0 5px 0 15px;
+    color: #009E74;
   }
 
 .status-box {
@@ -188,15 +189,16 @@ body {
 }
 
   .back-project-form-header {
-    padding: 20px 0;
+    padding: 20px 20px;
     border-bottom: 1px solid black;
     text-align: center;
   }
 
-    .close-back-project-modal {
+    .close-project-modal {
       float: right;
       background-color: #FBFBFA;
       border: none;
+      font-size: 16px;
       font-weight: bold;
     }
 

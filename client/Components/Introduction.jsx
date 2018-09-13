@@ -22,7 +22,7 @@ class Introduction extends React.Component {
   }
 
   componentDidMount() {
-    this.getProject(1);
+    this.getProject(2);
   }
 
   getProject(projectid) {

@@ -1,34 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Introduction /> render() renders the component 1`] = `
-<div>
-  <div
-    id="navigation-bar"
-  >
-    <NavBar />
-  </div>
-  <div
-    id="header"
-  >
-    <Header
-      owner={Object {}}
-      project={Object {}}
-    />
-  </div>
-  <div
-    className="player-and-status-container"
-  >
-    <Player
-      player={Object {}}
-      project={Object {}}
-    />
-    <Status
-      stats={Object {}}
-    />
-  </div>
-</div>
-`;
-
 exports[`<Introduction /> render() renders the main introduction component 1`] = `
 <div>
   <div
@@ -52,6 +23,7 @@ exports[`<Introduction /> render() renders the main introduction component 1`] =
       project={Object {}}
     />
     <Status
+      backButtonClicked={[Function]}
       stats={Object {}}
     />
   </div>
