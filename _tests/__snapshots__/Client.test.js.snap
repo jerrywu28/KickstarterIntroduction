@@ -1,7 +1,192 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Introduction /> render() renders the main introduction component 1`] = `
+exports[`<BackProjectModal /> render() renders the component for header 1`] = `
 <div>
+  <div
+    className="back-project-modal"
+  >
+    <div
+      className="back-project-form"
+    >
+      <div
+        className="back-project-form-header"
+      >
+        <button
+          className="close-project-modal"
+          onClick={[Function]}
+        >
+          ×
+        </button>
+        <img
+          height="18.9375"
+          src="https://d3mlfyygrfdi2i.cloudfront.net/kickstarter-logo-color.png"
+          width="185"
+        />
+      </div>
+      <div
+        className="back-project-title"
+      >
+        <h1>
+          Hahaha
+        </h1>
+        <h5>
+          By 
+          Jerry
+        </h5>
+      </div>
+      <div
+        className="back-project-form-main"
+      >
+        <div
+          className="back-project-form-pledges"
+        >
+          <h3>
+            Support this project
+          </h3>
+          <ul
+            className="list-project-pledges"
+          >
+            <li
+              className="list-project-pledge-item"
+            >
+              Pledge/support module can go here
+            </li>
+            <li
+              className="list-project-pledge-item"
+            >
+              Pledge/support module can go here
+            </li>
+            <li
+              className="list-project-pledge-item"
+            >
+              Pledge/support module can go here
+            </li>
+            <li
+              className="list-project-pledge-item"
+            >
+              Pledge/support module can go here
+            </li>
+            <li
+              className="list-project-pledge-item"
+            >
+              Pledge/support module can go here
+            </li>
+          </ul>
+        </div>
+        <div
+          className="back-project-form-info"
+        >
+          <h5>
+            <b>
+              Kickstarter is not a store.
+            </b>
+          </h5>
+          <h5>
+            It's a way to bring creative projects to life.
+          </h5>
+          <p>
+            Kickstarter does not guarantee projects or investigate a creator's ability to complete their project. It is the responsibility of the project creator to complete their project as promised, and the claims of this project are theirs alone.
+          </p>
+          <br />
+          <p>
+            Learn more about accountability
+          </p>
+          <br />
+          <h5>
+            FREQUENTLY ASKED QUESTIONS
+          </h5>
+          <ul
+            className="frequently-asked-questions"
+          >
+            <li
+              className="faq-question"
+            >
+              ► How do I pledge?
+            </li>
+            <li
+              className="faq-question"
+            >
+              ► When is my card charged?
+            </li>
+            <li
+              className="faq-question"
+            >
+              ► So I'm only charged if funding succeeds?
+            </li>
+            <li
+              className="faq-question"
+            >
+              ► What can others see about my pledge?
+            </li>
+            <li
+              className="faq-question"
+            >
+              ► What if I want to change my pledge?
+            </li>
+            <li
+              className="faq-question"
+            >
+              ► If this project is funded, how do I get my reward?
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Header /> render() renders the component for header 1`] = `
+<div
+  className="header-container"
+>
+  <div
+    className="header-owner"
+  >
+    <h1
+      onClick={[Function]}
+    >
+      <img
+        className="avatar"
+        src="url here"
+      />
+    </h1>
+    <div
+      id="author"
+    >
+      <a
+        className="black-link"
+        href="#"
+        onClick={[Function]}
+      >
+        By 
+      </a>
+      <br />
+      <a
+        className="gray-link"
+        href="#"
+      >
+         created
+      </a>
+    </div>
+  </div>
+  <div
+    className="header-title"
+  >
+    <h1>
+      something
+    </h1>
+    <h3
+      id="project-tagline"
+    />
+  </div>
+</div>
+`;
+
+exports[`<Introduction /> render() renders the main introduction component 1`] = `
+<div
+  onKeyDown={[Function]}
+>
   <div
     id="navigation-bar"
   >
@@ -12,6 +197,7 @@ exports[`<Introduction /> render() renders the main introduction component 1`] =
   >
     <Header
       owner={Object {}}
+      ownerClicked={[Function]}
       project={Object {}}
     />
   </div>
@@ -79,5 +265,190 @@ exports[`<NavBar /> render() renders the component for NavBar 1`] = `
       Sign in
     </a>
   </div>
+</div>
+`;
+
+exports[`<OwnerModal /> render() renders the component for header 1`] = `
+<div>
+  <div
+    className="owner-modal"
+  >
+    <div
+      className="owner-modal-box"
+    >
+      <button
+        className="close-project-modal"
+        onClick={[Function]}
+      >
+        ×
+      </button>
+      <center>
+        <h4>
+          About the creator
+        </h4>
+      </center>
+      <br />
+      <h1>
+        Jerry
+      </h1>
+      <h6>
+        Athens, GA
+      </h6>
+      <p
+        className="owner-summary"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Player /> render() renders the component for player 1`] = `
+<div
+  className="player-box"
+>
+  <iframe
+    frameBorder="0"
+    height="440"
+    src="http://www.youtube.com/"
+    width="740"
+  />
+  <br />
+  <div
+    className="under-player-buttons"
+  >
+    <a
+      className="gray-link"
+      href="#"
+    >
+      <i
+        className="fab fa-kickstarter playlink"
+      />
+      Project We Love
+    </a>
+    <a
+      className="gray-link"
+      href="#"
+    >
+      <i
+        className="far fa-compass playlink"
+      />
+      Publishing
+    </a>
+    <a
+      className="gray-link"
+      href="#"
+    >
+      <i
+        className="fas fa-map-marker-alt playlink"
+      />
+      Athens, GA
+    </a>
+  </div>
+</div>
+`;
+
+exports[`<Status /> render() renders the component for status 1`] = `
+<div
+  className="status-box"
+>
+  <progress
+    max={1000}
+    value={505}
+  />
+  <br />
+  <div
+    id="funds-raised"
+  >
+    $
+  </div>
+  <div
+    className="project-stats-text"
+  >
+    pledged as of $
+     goal
+  </div>
+  <br />
+  <div
+    className="project-stats"
+  />
+  <div
+    className="project-stats-text"
+  >
+    backers
+  </div>
+  <br />
+  <div
+    className="project-stats"
+  >
+    0
+  </div>
+  <div
+    className="project-stats-text"
+  >
+    days to go
+  </div>
+  <br />
+  <button
+    className="status"
+    id="back-project"
+    onClick={[Function]}
+  >
+    Back this project
+  </button>
+  <br />
+  <button
+    className="status"
+    id="follow-project"
+    onClick={[Function]}
+  >
+    <div
+      className="glyphicon glyphicon-bookmark"
+    />
+     Follow Project
+  </button>
+  <a
+    className="gray-link"
+    href="#"
+  >
+    <i
+      className="fab fa-facebook"
+    />
+  </a>
+  <a
+    className="gray-link"
+    href="#"
+  >
+    <i
+      className="fab fa-twitter"
+    />
+  </a>
+  <a
+    className="gray-link"
+    href="#"
+  >
+    <i
+      className="fas fa-envelope"
+    />
+  </a>
+  <a
+    className="gray-link"
+    href="#"
+  >
+    <i
+      className="fas fa-code"
+    />
+  </a>
+  <br />
+  <br />
+  <p
+    id="project-term"
+  >
+    <u>
+      All or nothing.
+    </u>
+    This project will only be funded if it reaches its goal by 
+    Thursday, September 13, 2018 6:05 PM
+    .
+  </p>
 </div>
 `;

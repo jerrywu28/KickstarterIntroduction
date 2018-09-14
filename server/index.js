@@ -12,9 +12,6 @@ app.get('/projects', (req, res) => {
 });
 
 app.get('/projects/:id', (req, res) => {
-  // Before sending data to server, days left should be formatted properly here (instead of inside of the database).
-  // Also, server can convert $ pledged and goal to strings (with commas)
-  // Even final date notice can be formatted at this point (if format is undesirable)
   console.log('Server receiving GET request for project with id: ', req.params.id);
   database.findProject({id: req.params.id}, projects => res.status(200).send(projects));
 });

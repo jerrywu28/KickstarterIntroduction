@@ -25,10 +25,10 @@ class Introduction extends React.Component {
   }
 
   componentDidMount() {
-    this.getProject(10);
+    this.getProject();
   }
 
-  getProject(projectid) {
+  getProject(projectid = window.location.pathname.slice(1)) {
     //Set to 1 for now, but project id can be passed in to fetch specific project
     axios.get(`http://127.0.0.1:3000/projects/${projectid}`)
     .then(project => {
@@ -37,10 +37,12 @@ class Introduction extends React.Component {
         owner: project.data[0].owner,
         player: project.data[0].player,
         status: {
+          currentRaised: project.data[0].status.currentRaised,
+          targetGoal: project.data[0].status.targetGoal,
           backers: project.data[0].status.backers.toLocaleString(),
-          currentRaised: project.data[0].status.currentRaised.toLocaleString(),
+          currentRaisedString: project.data[0].status.currentRaised.toLocaleString(),
           deadline: project.data[0].status.deadline,
-          targetGoal: project.data[0].status.targetGoal.toLocaleString(),
+          targetGoalString: project.data[0].status.targetGoal.toLocaleString(),
         },
       })
     })

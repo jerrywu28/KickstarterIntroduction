@@ -5,8 +5,8 @@ const Status = props => {
   return (
     <div className="status-box">
       <progress value={props.stats.currentRaised} max={props.stats.targetGoal}></progress><br />
-      <div id="funds-raised">${props.stats.currentRaised}</div>
-      <div className="project-stats-text">pledged as of ${props.stats.targetGoal} goal</div><br />
+      <div id="funds-raised">${props.stats.currentRaisedString}</div>
+      <div className="project-stats-text">pledged as of ${props.stats.targetGoalString} goal</div><br />
       <div className="project-stats">{props.stats.backers}</div>
       <div className="project-stats-text">backers</div><br />
       <div className="project-stats">{moment(props.stats.deadline).diff(moment(), 'days')}</div>

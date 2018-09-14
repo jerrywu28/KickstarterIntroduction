@@ -8,6 +8,8 @@ import NavBar from '../client/Components/navbar.jsx';
 import Header from '../client/Components/header.jsx';
 import Player from '../client/Components/player.jsx';
 import Status from '../client/Components/status.jsx';
+import BackProjectModal from '../client/Components/backprojectmodal.jsx';
+import OwnerModal from '../client/Components/ownermodal.jsx';
 
 Enzyme.configure({adapter: new Adapter()});
 
@@ -34,7 +36,33 @@ describe('<NavBar />', () => {
 describe('<Header />', () => {
   describe('render()', () => {
     test('renders the component for header', () => {
-      const wrapper = shallow(<Header />);
+      const ownerObj = {avatar: 'url here'}
+      const projectObj = {name: 'something'}
+      const wrapper = shallow(<Header owner={ownerObj} project={projectObj}/>);
+
+      expect(toJson(wrapper)).toMatchSnapshot();
+    });
+  });
+});
+
+describe('<BackProjectModal />', () => {
+  describe('render()', () => {
+    test('renders the component for header', () => {
+      const ownerObj = {name: 'Jerry'};
+      const projectObj = {name: 'Hahaha'};
+      const wrapper = shallow(<BackProjectModal project={projectObj} owner={ownerObj}/>);
+
+      expect(toJson(wrapper)).toMatchSnapshot();
+    });
+  });
+});
+
+describe('<OwnerModal />', () => {
+  describe('render()', () => {
+    test('renders the component for header', () => {
+      const ownerObj = {name: 'Jerry'};
+      const playerObj={source: 'http://www.youtube.com/', location: 'Athens, GA'}
+      const wrapper = shallow(<OwnerModal owner={ownerObj} player={playerObj}/>);
 
       expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -44,7 +72,8 @@ describe('<Header />', () => {
 describe('<Player />', () => {
   describe('render()', () => {
     test('renders the component for player', () => {
-      const wrapper = shallow(<Player />);
+      const playerObj={source: 'http://www.youtube.com/', location: 'Athens, GA'}
+      const wrapper = shallow(<Player player={playerObj}/>);
 
       expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -54,7 +83,8 @@ describe('<Player />', () => {
 describe('<Status />', () => {
   describe('render()', () => {
     test('renders the component for status', () => {
-      const wrapper = shallow(<Status />);
+      const statsObj={currentRaised: 505, targetGoal: 1000}
+      const wrapper = shallow(<Status stats={statsObj}/>);
 
       expect(toJson(wrapper)).toMatchSnapshot();
     });
