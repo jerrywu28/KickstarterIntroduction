@@ -1,7 +1,7 @@
 import React from 'react';
 
 const BackProjectModal = props => (
-  <div id="modal">
+  <div>
     <div className="back-project-modal">
       <div className="back-project-form">
         <div className="back-project-form-header">
@@ -16,11 +16,11 @@ const BackProjectModal = props => (
           <div className="back-project-form-pledges">
             <h3>Support this project</h3>
             <ul className="list-project-pledges">
-              <li className="list-project-pledge-item">Pledge boxes go here</li>
-              <li className="list-project-pledge-item">Pledge boxes go here</li>
-              <li className="list-project-pledge-item">Pledge boxes go here</li>
-              <li className="list-project-pledge-item">Pledge boxes go here</li>
-              <li className="list-project-pledge-item">Pledge boxes go here</li>
+              <li className="list-project-pledge-item">Pledge/support module can go here</li>
+              <li className="list-project-pledge-item">Pledge/support module can go here</li>
+              <li className="list-project-pledge-item">Pledge/support module can go here</li>
+              <li className="list-project-pledge-item">Pledge/support module can go here</li>
+              <li className="list-project-pledge-item">Pledge/support module can go here</li>
             </ul>
           </div>
           <div className="back-project-form-info">
@@ -31,13 +31,13 @@ const BackProjectModal = props => (
             <p>Learn more about accountability</p>
             <br />
             <h5>FREQUENTLY ASKED QUESTIONS</h5>
-            <ul>
-            <li>How do I pledge?</li>
-            <li>When is my card charged?</li>
-            <li>So I'm only charged if funding succeeds?</li>
-            <li>What can others see about my pledge?</li>
-            <li>What if I want to change my pledge?</li>
-            <li>If this project is funded, how do I get my reward?</li>
+            <ul className="frequently-asked-questions">
+            <li className="faq-question">► How do I pledge?</li>
+            <li className="faq-question">► When is my card charged?</li>
+            <li className="faq-question">► So I'm only charged if funding succeeds?</li>
+            <li className="faq-question">► What can others see about my pledge?</li>
+            <li className="faq-question">► What if I want to change my pledge?</li>
+            <li className="faq-question">► If this project is funded, how do I get my reward?</li>
             </ul>
           </div>
         </div>

@@ -30,6 +30,7 @@ describe('Insertion of new Mongo documents into database', () => {
         avatar: 'https://yt3.ggpht.com/a-/AN66SAzuvt7wwLelQ34EIP8hmDYLiuzGK-mOkiXsuA=s88-mo-c-c0xffffffff-rj-k-no',
         name: 'Chillhop Music',
         numProjects: 2,
+        summary: 'Spectrum South is on a mission to bring visibility to the diverse and resilient individuals, groups, and personalities of the ever-growing LGBTQ South. We\'re a Texas-based online magazine focused on queer southern identity and culture. Through inclusive, well-curated interviews, commentaries, and personal narratives, we share the stories of the South’s thriving LGBTQ community of innovators, taco truck junkies, hip-hop lovers, dreamers, sweet tea drinkers, techies, and more. Wherever you fall on the spectrum—gay or trans, big city born or small town grown—Spectrum South happily celebrates you and your authenticity.',
         },
       player: {
         source: 'https://www.youtube.com/embed/LsBrT6vbQa8',

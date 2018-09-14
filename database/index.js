@@ -13,6 +13,7 @@ const projectSchema = mongoose.Schema({
     avatar: String,
     name: String,
     numProjects: Number,
+    summary: String,
   },
   player: {
     source: String,
@@ -38,6 +39,7 @@ const createProject = projects => {
         avatar: project.owner.avatar,
         name: project.owner.name,
         numProjects: project.owner.numProjects,
+        summary: project.owner.summary,
       },
       player: {
         source: project.player.source,
