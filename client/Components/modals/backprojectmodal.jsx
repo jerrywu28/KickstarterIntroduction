@@ -3,9 +3,9 @@ import React from 'react';
 const BackProjectModal = props => (
   <div>
     <div className="back-project-modal">
+      <button className="close-project-modal x-button" onClick={() => props.backButtonClicked()}>&times;</button>
       <div className="back-project-form">
         <div className="back-project-form-header">
-        <button className="close-project-modal" onClick={() => props.backButtonClicked()}>&times;</button>
         <img src="https://d3mlfyygrfdi2i.cloudfront.net/kickstarter-logo-color.png" height="18.9375" width="185"></img>
         </div>
         <div className="back-project-title">
@@ -42,6 +42,7 @@ const BackProjectModal = props => (
           </div>
         </div>
       </div>
+      <center><button className="close-project-modal close-button" onClick={() => props.backButtonClicked()}>Close</button></center>
     </div>
   </div>
 )

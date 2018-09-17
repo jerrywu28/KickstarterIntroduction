@@ -1,0 +1,33 @@
+/* Header w/ project owner information and title + description */
+.header-container {
+  display: flex;
+  align-items: center;
+  margin: 30px 100px 20px 100px;
+}
+
+.header-owner {
+  flex: 1;
+  height: 150px;
+  margin: 0 25px 0 0px;
+}
+  
+  .avatar {
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  #author {
+    text-indent: -25px;
+  }
+
+.header-title {
+  flex: 5;
+  height: 125px;
+  margin: -20px 0 0 -10px;
+}
+  
+  #project-tagline {
+    color: rgba(90,90,90,1);
+    font-size: 18px;
+    font-weight: 3;
+  }

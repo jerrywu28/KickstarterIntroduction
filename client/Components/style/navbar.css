@@ -1,0 +1,23 @@
+/* NavBar w links to explore, start a project, the website logo, search feature, and sign-in*/
+.main-navigation-bar {
+  display: flex;
+  border-bottom: 1px solid black;
+  height: 65px;
+  align-items: center;
+  justify-content: center;
+}
+  
+  #nav-bar-1 {
+    flex: 0 0 auto;
+    margin: 0 25px;
+  }
+  
+  #nav-bar-2 {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  
+  #nav-bar-3 {
+    flex: 0 0 auto;
+    margin: 0 25px;
+  }

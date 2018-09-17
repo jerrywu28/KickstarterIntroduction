@@ -1,6 +1,10 @@
 body {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Maison Neue', sans-serif;
   background-color: #FBFBFA;
+}
+
+*:focus {
+  outline: 0;
 }
 
 /* NavBar w links to explore, start a project, the website logo, search feature, and sign-in*/
@@ -14,7 +18,7 @@ body {
   
   #nav-bar-1 {
     flex: 0 0 auto;
-    margin: 0 25px;
+    margin: 0 %;
   }
   
   #nav-bar-2 {
@@ -24,7 +28,7 @@ body {
   
   #nav-bar-3 {
     flex: 0 0 auto;
-    margin: 0 25px;
+    margin: 0 10%;
   }
 
   a.black-link {
@@ -40,7 +44,7 @@ body {
 .header-container {
   display: flex;
   align-items: center;
-  margin: 30px 50px 20px 50px;
+  margin: 30px 10% 20px 10%;
 }
 
 .header-owner {
@@ -86,27 +90,34 @@ body {
 /* Video player and RHS 'status' container */
 .player-and-status-container {
   display: flex;
+  flex-wrap: wrap;
+  padding: 0 10%;
 }
 
 .player-box {
   flex: 2;
-  margin: 0 0 0 50px;
 }
 
+  #iframe-player {
+    width: 90%;
+    height: 100%;
+  }
+
   .playlink {
-    margin: 0 5px 0 15px;
-    color: #009E74;
+    margin: 15px 5px 0 15px;
+    color: black;
+    font-size: 16px;
   }
 
 .status-box {
   flex: 1;
-  margin: -10px 0 0 0;
+  width: 500px;
 }
 
   progress {
     -webkit-appearance: none;
     height: 3px;
-    width: 350px;
+    width: 100%;
     color: #037362;
   }
 
@@ -135,16 +146,16 @@ body {
   }
 
     #back-project {
-      width: 350px;
+      width: 100%;
     }
 
     #follow-project {
       background-color: white;
       color: black;
-      width: 175px;
+      width: 50%;
       height: 40px;
       border: 1px solid lightgray;
-      margin: 0 50px 0 0;
+      margin: 0 25px 0 0;
     }
 
     #follow-project:hover {
@@ -169,6 +180,22 @@ body {
     word-wrap: true;
   }
 
+/*Modal utilities (x and close buttons)*/
+.close-project-modal {
+  text-align: center;
+  background-color: rgba(200,200,200,0);
+  border: none;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.x-button {
+  float: right;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/*Back project (ie: make contribution) modal*/
 .back-project-modal {
   position: fixed;
   z-index: 1;
@@ -176,15 +203,16 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 50px 0 0 0 ;
+  padding: 0 10%;
   overflow: auto;
   background-color: rgba(200,200,200,0.98);
 }
 
   .back-project-form {
     margin: auto auto;
-    width: 80%;
-    height: 90%;
+    width: 100%;
+    max-height: 90%;
+    overflow: scroll;
     background-color: #FBFBFA;
   }
 
@@ -194,13 +222,6 @@ body {
       text-align: center;
     }
 
-      .close-project-modal {
-        float: right;
-        background-color: #FBFBFA;
-        border: none;
-        font-size: 16px;
-        font-weight: bold;
-      }
 
     .back-project-title {
       padding: 5px 0 0 0;
@@ -247,6 +268,7 @@ body {
         font-size: 11px;
       }
 
+/*Modal with information about the owner of the project*/
 .owner-modal {
   position: fixed;
   z-index: 1;
@@ -254,20 +276,63 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 10% 0 0 0 ;
+  padding: 10% 30%;
   overflow: auto;
   background-color: rgba(200,200,200,0.98);
 }
 
-  .owner-modal-box {
-    margin: auto;
+  .owner-modal-display {
+    margin: 0 auto;
     padding: 10px 50px;
-    width: 50%;
+    width: 100%;
     height: 75%;
+    overflow: scroll;
     background-color: #FBFBFA;
   }
 
   .owner-summary {
     margin: 25px 0 0 0;
     font-size: 16px;
+  }
+
+/*Modal with links and snippet about other projects the owner has created*/
+.other-projects-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10% 30%;
+  overflow: scroll;
+  background-color: rgba(200,200,200,0.98);
+}
+
+  .other-projects-display {
+    margin: 0 auto;
+    padding: 10px 50px;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: #FBFBFA;
+  }
+
+/*Modal that appears when user is not signed in but wants to follow project*/
+.follow-project-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20% 35%;
+  background-color: rgba(200,200,200,0.98);
+}
+
+  .follow-project-display {
+    margin: 0 auto;
+    padding: 5px 25px;
+    width: 100%;
+    height: 100%;
+    background-color: #FBFBFA;
   }
