@@ -1,0 +1,71 @@
+.back-project-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 10%;
+  overflow: auto;
+  background-color: rgba(200,200,200,0.98);
+}
+
+  .back-project-form {
+    margin: auto auto;
+    width: 100%;
+    max-height: 90%;
+    overflow: scroll;
+    background-color: #FBFBFA;
+  }
+
+    .back-project-form-header {
+      padding: 20px 20px;
+      border-bottom: 1px solid black;
+      text-align: center;
+    }
+
+
+    .back-project-title {
+      padding: 5px 0 0 0;
+      height: 100px;
+      background-color: rgb(245,245,245);
+      border-bottom: 1px solid lightgray;
+      text-align: center;
+    }
+
+    .back-project-form-main {
+      display: flex;
+      padding: 50px;
+    }
+
+      .back-project-form-pledges {
+        flex: 3;
+        height: 500px;
+      }
+
+        .list-project-pledges {
+          list-style: none;
+        }
+
+        .list-project-pledge-item {
+          margin: 20px 0 0 -40px;
+          padding: 5px;
+          height: 50px;
+          width: 500px;
+          border: 1px solid lightgray;
+        }
+
+      .back-project-form-info {
+        flex: 2;
+        height: 500px;
+        font-size: 10px;
+      }
+
+      .frequently-asked-questions {
+        list-style: none;
+      }
+
+      .faq-question {
+        margin: 0 0 0 -40px;
+        font-size: 11px;
+      }

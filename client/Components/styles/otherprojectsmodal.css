@@ -1,0 +1,20 @@
+.other-projects-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10% 30%;
+  overflow: scroll;
+  background-color: rgba(200,200,200,0.98);
+}
+
+  .other-projects-display {
+    margin: 0 auto;
+    padding: 10px 50px;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: #FBFBFA;
+  }

@@ -9,6 +9,8 @@ import FollowProjectModal from './modals/followprojectmodal.jsx';
 import axios from 'axios';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './styles/introduction.css';
+import './styles/Fonts/MaisonNeue/fonts.css';
 
 class Introduction extends React.Component {
   constructor(props){

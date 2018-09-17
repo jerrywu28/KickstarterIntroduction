@@ -4,7 +4,7 @@ const cors = require('cors');
 const database = require('../database/index.js');
 const app = express();
 
-app.use(express.static(__dirname + '/../public'), express.urlencoded({extended: true}), parser.json(), cors());
+app.use(express.static(__dirname + '/../public/'), express.urlencoded({extended: true}), parser.json(), cors());
 
 app.get('/projects', (req, res) => {
   console.log('Server receiving GET request for all projects.');

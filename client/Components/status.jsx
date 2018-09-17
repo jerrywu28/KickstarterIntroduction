@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import './styles/status.css'
 
 const Status = props => {
   return (

@@ -1,0 +1,60 @@
+.status-box {
+  flex: 1;
+  margin: -10px 0 0 0;
+  width: 500px;
+}
+
+  progress {
+    -webkit-appearance: none;
+    height: 3px;
+    width: 100%;
+    color: #037362;
+  }
+
+  #funds-raised {
+    font-size: 24px;
+    color: #037362;
+  }
+
+  .project-stats {
+    font-size: 24px;
+    color: black;
+  }
+
+  .project-stats-text {
+    font-size: 14px;
+    color: rgba(90,90,90,1)
+  }
+
+  button.status {
+    background-color: #009E74;
+    color: white;
+    font-size: 14px;
+    border: none;
+    margin: 0 0 15px 0;
+    height: 50px;
+  }
+
+    #back-project {
+      width: 100%;
+    }
+
+    #follow-project {
+      background-color: white;
+      color: black;
+      width: 50%;
+      height: 40px;
+      border: 1px solid lightgray;
+      margin: 0 25px 0 0;
+    }
+
+    #follow-project:hover {
+      border: 1px solid black;
+      box-shadow: 0 0 0 0px;
+    }
+
+  button.status:hover {
+    background-color: #037362;
+    position: relative;
+    top: -1px;
+  }

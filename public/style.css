@@ -7,7 +7,6 @@ body {
   outline: 0;
 }
 
-/* NavBar w links to explore, start a project, the website logo, search feature, and sign-in*/
 .main-navigation-bar {
   display: flex;
   border-bottom: 1px solid black;

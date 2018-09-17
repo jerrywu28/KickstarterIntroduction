@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/player.css';
 
 const Player = props => (
   <div className="player-box">

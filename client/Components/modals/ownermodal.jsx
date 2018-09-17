@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/ownermodal.css';
 
 const OwnerModal = props => (
   <div>

@@ -1,24 +1,3 @@
-/* Video player and RHS 'status' container */
-.player-and-status-container {
-  display: flex;
-  padding: 0 100px;
-}
-
-.player-box {
-  flex: 2;
-}
-
-  #iframe-player {
-    width: 90%;
-    height: 100%;
-  }
-
-  .playlink {
-    margin: 15px 5px 0 15px;
-    color: black;
-    font-size: 16px;
-  }
-
 .status-box {
   flex: 1;
   margin: -10px 0 0 0;

@@ -1,0 +1,25 @@
+.owner-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10% 30%;
+  overflow: auto;
+  background-color: rgba(200,200,200,0.98);
+}
+
+  .owner-modal-display {
+    margin: 0 auto;
+    padding: 10px 50px;
+    width: 100%;
+    height: 75%;
+    overflow: scroll;
+    background-color: #FBFBFA;
+  }
+
+  .owner-summary {
+    margin: 25px 0 0 0;
+    font-size: 16px;
+  }
