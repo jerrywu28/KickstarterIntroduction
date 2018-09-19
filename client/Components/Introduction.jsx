@@ -35,7 +35,7 @@ class Introduction extends React.Component {
 
 //Esc key can be pressed to set all displays to false (to exit modal using this key)
   componentDidMount() {
-    this.getProject(1);
+    this.getProject();
     window.addEventListener('keydown', event => {
       if (event.keyCode === 27){
         this.setState({
@@ -50,7 +50,8 @@ class Introduction extends React.Component {
 
   getProject(projectid = window.location.pathname.slice(1)) {
     //Set to 1 for now, but project id can be passed in to fetch specific project
-    axios.get(`http://127.0.0.1:3001/projects/${projectid}`)
+    console.log(projectid);
+    axios.get(`http://127.0.0.1:3001/${projectid}`)
     .then(project => {
       this.setState({
         project: project.data[0],
