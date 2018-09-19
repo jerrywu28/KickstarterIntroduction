@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/backprojectmodal.css';
+import Script from 'react-load-script';
 
 const BackProjectModal = props => (
   <div>
@@ -16,13 +17,9 @@ const BackProjectModal = props => (
         <div className="back-project-form-main">
           <div className="back-project-form-pledges">
             <h3>Support this project</h3>
-            <ul className="list-project-pledges">
-              <li className="list-project-pledge-item">Pledge/support module can go here</li>
-              <li className="list-project-pledge-item">Pledge/support module can go here</li>
-              <li className="list-project-pledge-item">Pledge/support module can go here</li>
-              <li className="list-project-pledge-item">Pledge/support module can go here</li>
-              <li className="list-project-pledge-item">Pledge/support module can go here</li>
-            </ul>
+            <div id="support">
+            </div>
+            <Script url="http://127.0.0.1:2400/dist/bundle.js"></Script>
           </div>
           <div className="back-project-form-info">
             <h5><b>Kickstarter is not a store.</b></h5>

@@ -121,7 +121,7 @@ const generateFakes = () => {
 };
 
 // //Uncomment to generate 100 projects
-generateFakes();
+// generateFakes();
 
 module.exports.Project = Project;
 module.exports.createProject = createProject;
