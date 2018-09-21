@@ -48,7 +48,7 @@ class Introduction extends React.Component {
     })
   }
 
-  getProject(projectid = window.location.pathname.slice(1)) {
+  getProject(projectid = window.location.pathname.slice(10)) {
     //Set to 1 for now, but project id can be passed in to fetch specific project
     console.log(projectid);
     axios.get(`http://127.0.0.1:3001/${projectid}`)

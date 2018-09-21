@@ -3,6 +3,7 @@ const parser = require('body-parser');
 const cors = require('cors');
 const database = require('../database/index.js');
 const app = express();
+app.use('/projects/:id', express.static(__dirname + '/../public/'));
 app.use(express.static(__dirname + '/../public/'));
 app.use(express.urlencoded({extended: true}), parser.json(), cors());
 
@@ -11,7 +12,7 @@ app.get('/projects', (req, res) => {
   database.findProjects(projects => res.status(200).send(projects));
 });
 
-app.get('/projects/:id', (req, res) => {
+app.get('/:id', (req, res) => {
   console.log('Server receiving GET request for project with id: ', req.params.id);
   database.findProject({id: req.params.id}, projects => res.status(200).send(projects));
 });
