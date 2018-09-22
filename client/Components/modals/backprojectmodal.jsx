@@ -19,7 +19,7 @@ const BackProjectModal = props => (
             <h3>Support this project</h3>
             <div id="support">
             </div>
-            <Script url="http://127.0.0.1:2400/dist/bundle.js"></Script>
+            <Script url="https://s3-us-west-1.amazonaws.com/hrsf101kickstartersupport/bundle.js"></Script>
           </div>
           <div className="back-project-form-info">
             <h5><b>Kickstarter is not a store.</b></h5>

@@ -1,8 +1,6 @@
 /* Video player and RHS 'status' container */
 .player-and-status-container {
   display: flex;
-  padding: 0 100px;
-  margin: 0 0 150px 0;
 }
 
 .player-box {

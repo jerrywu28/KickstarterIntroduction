@@ -49,8 +49,7 @@ class Introduction extends React.Component {
   }
 
   getProject(projectid = window.location.pathname.slice(10)) {
-    //Set to 1 for now, but project id can be passed in to fetch specific project
-    console.log(projectid);
+    projectid.trim().length < 1 ? '1/' : window.location.pathname.slice(10);
     axios.get(`http://13.57.182.36/${projectid}`)
     .then(project => {
       this.setState({
