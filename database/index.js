@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const faker = require('faker');
-mongoose.connect('mongodb://database:27017/projects', { useNewUrlParser: true });
+mongoose.connect('mongodb://172.17.0.3/projects', { useNewUrlParser: true });
 
 const projectSchema = mongoose.Schema({
   id: {

@@ -1,4 +1,4 @@
-FROM node:8.0
+FROM node:8
 
 # App directory where the source code lives
 WORKDIR /server
