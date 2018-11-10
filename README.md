@@ -1,13 +1,10 @@
-# Project Name
+# Skunkworks-LLC Crowdfunding (A Kickstarter Clone)
 
-> Project description
+> Microservice application modeled after Kickstarter. Introduction module consists of header, video player, and status bar.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/Skunkworks-LLC/KickstarterIntroduction
 
 ## Table of Contents
 
@@ -17,23 +14,9 @@
 
 ## Usage
 
-> Some usage instructions
+> Microservice must be connected to other two microservices via proxy server.
 
 ## Requirements
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
+Npm install dependencies.
 
